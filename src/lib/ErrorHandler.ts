@@ -1,4 +1,4 @@
-import { ErrorRequestHandler, Request, Response, NextFunction } from 'express';
+import { ErrorRequestHandler, NextFunction, Request, Response } from 'express';
 import { ErrorSource } from './enums/errorSource';
 import { HttpStatusCode } from './enums/httpStatusCode';
 import { HttpStatusMessage } from './enums/httpStatusMessage';
@@ -21,7 +21,7 @@ export const errorHandler: ErrorRequestHandler = (err: any, req: Request, res: R
         stack: err.stack ? err.stack : '',
         errors: err.errors ? err.errors : [],
         source: err.source ? err.source : ErrorSource.INTERNAL,
-        transactionId: req.txId,
+        transactionId: req.txId, // placeholder for values populated by package @akrdevtech/lib-express-request-id
     };
 
     if (body.source === ErrorSource.VALIDATION && body.errors.length) {
