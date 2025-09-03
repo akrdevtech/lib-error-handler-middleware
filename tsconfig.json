@@ -6,17 +6,10 @@
     "resolveJsonModule": true,
     "noImplicitAny": false,
     "declaration": true,
-    "outDir": "./dist",
+    "outDir": "./dist/cjs",
     "strict": true
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/__tests__/*"
-  ],
-  "files": [
-    "types/request_modified.d.ts"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules", "**/__tests__/*"],
+  "files": ["types/request_modified.d.ts"]
 }
