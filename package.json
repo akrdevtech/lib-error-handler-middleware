@@ -1,6 +1,6 @@
 {
   "name": "@akrdevtech/lib-error-handler-middleware",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Error handler middleware for express js",
   "main": "dist/index.js",
   "scripts": {
